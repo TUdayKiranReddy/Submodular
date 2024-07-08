@@ -337,18 +337,18 @@ Then $\min_{\A \subseteq \V}F(\A) = \min_{\w \in \{0, 1\}^{p}}f(\w) = \min_{\w \
 subsets of $\A$ and all supersets of $\A$.
 \item \textbf{Lattice of Minimizers:} If $\A$ and $\B$ are minimizers of $F$, then so are $\A \cup \B$ and $\A \cap \B$.
 \item \textbf{Minimizing a Submodular Function:} 
-\begin{theorem}[Grötschel-Lovász-Schrijver '81]
+\begin{theorem}[\cite{grotschel_ellipsoid_1981}]
   There is an algorithm that computes the minimum of any submodular
   function $F: 2^{\V} \to \R$ in $poly(|\V|)$ time.
 \end{theorem}
 \item Maximizing a submodular function is \textbf{NP-Hard} in general.\\
 \textbf{Greedy Algorithm:} Pick elements one-by-one, maximizing the gain
 in $F(\S)$, while maintaining $\S \subseteq \V$ i.e, $\S \gets \S \cup \argmax_{i \in \S}F(\S \cup \{i\}) - F(\S)$.
-\begin{theorem}[Nemhauser, Wolsey, Fisher ’78]
+\begin{theorem}[\cite{nemhauser_analysis_1978}]
 If $F$ is non-decreasing submodular Greedy Algorithm finds a solution
 of value atleast $(1-1/e) \times$ Optimal value for the problem $\max\{F(\S): |\S| \leq k\}$.
 \end{theorem}
-\begin{theorem}[Nemhauser, Wolsey ’78]
+\begin{theorem}[\cite{Nemhauser-Wolsey-78}]
 No algorithm using a polynomial number of
 queries to $F$ can achieve a factor better than $(1-1/e)$.
 \end{theorem}
